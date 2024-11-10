@@ -10,6 +10,8 @@ This project is a simulation of a double pendulum system in 3D, implemented usin
 - [Testing and Debugging](#testing-and-debugging)
 - [Contributors](#contributors)
 
+![image](https://github.com/user-attachments/assets/c84461a3-c9be-47c5-b171-f9ed6a4f0935)
+
 ## Overview
 
 This project demonstrates the complex, chaotic motion of a double pendulum—a pendulum with another pendulum attached to its end. This kind of system showcases hierarchical motion and interdependency between connected parts, as the second pendulum's motion is influenced by the movement of the first. The Godot engine’s `_physics_process` function updates positions at 60 frames per second, producing smooth, realistic motion.
@@ -75,7 +77,6 @@ This hierarchy enables the simulation of dependent motion, where movement in the
 3. **Parameter Modification**:
    - **Change Physical Constants**: Adjust `G` or `DAMPING` for different gravitational forces or friction levels.
    - **Vary Pendulum Properties**: Modify `length1`, `length2`, `mass1`, and `mass2` to observe different types of motion.
-![image](https://github.com/user-attachments/assets/0f5b05ab-f88c-449e-9b48-2d2f840e7482)
 
 ## Testing and Debugging
 
