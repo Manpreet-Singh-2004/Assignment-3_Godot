@@ -75,6 +75,7 @@ This hierarchy enables the simulation of dependent motion, where movement in the
 3. **Parameter Modification**:
    - **Change Physical Constants**: Adjust `G` or `DAMPING` for different gravitational forces or friction levels.
    - **Vary Pendulum Properties**: Modify `length1`, `length2`, `mass1`, and `mass2` to observe different types of motion.
+![image](https://github.com/user-attachments/assets/0f5b05ab-f88c-449e-9b48-2d2f840e7482)
 
 ## Testing and Debugging
 
