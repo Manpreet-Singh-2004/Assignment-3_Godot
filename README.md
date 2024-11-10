@@ -77,6 +77,11 @@ This hierarchy enables the simulation of dependent motion, where movement in the
 3. **Parameter Modification**:
    - **Change Physical Constants**: Adjust `G` or `DAMPING` for different gravitational forces or friction levels.
    - **Vary Pendulum Properties**: Modify `length1`, `length2`, `mass1`, and `mass2` to observe different types of motion.
+     
+## Background 
+1. **Texture from Polyhaven**: Imported jpg texture file from Polyhaven
+2. **Creation of World Environment**: Created world environment and then added sky. Further I added panaroma material to load the jpg image.
+![alt text](oak_veneer_01_diff_1k-1.jpg)
 
 ## Testing and Debugging
 
@@ -90,6 +95,8 @@ This hierarchy enables the simulation of dependent motion, where movement in the
 - **Debugging Examples**:
   - **Velocity Clamping**: Adjusted angular velocities to prevent over-acceleration during certain high-speed simulations.
   - **Error Logging**: Used print statements and Git commit messages to document and resolve issues, improving the final simulation quality.
+ 
+  ![alt text](image.png)
 
 ## Contributors
 
