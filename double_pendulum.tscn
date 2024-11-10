@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=3 uid="uid://di7htbcrm4mii"]
+
+[ext_resource type="Script" path="res://double_pendulum.gd" id="1_ejrx6"]
+[ext_resource type="Texture2D" uid="uid://bxbc6otg653gt" path="res://oak_veneer_01_diff_1k.jpg" id="2_5xcpy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rld5s"]
+albedo_color = Color(0.454524, 0.454524, 0.454524, 1)
+metallic = 1.0
+roughness = 0.6
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6mwuj"]
+material = SubResource("StandardMaterial3D_rld5s")
+top_radius = 0.4
+bottom_radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h8vn2"]
+albedo_color = Color(0.439216, 0.513726, 0.796078, 1)
+metallic = 0.89
+roughness = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_fe3up"]
+material = SubResource("StandardMaterial3D_h8vn2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcbj1"]
+albedo_color = Color(0.454902, 0.454902, 0.454902, 1)
+metallic = 1.0
+roughness = 0.6
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_25fm2"]
+material = SubResource("StandardMaterial3D_bcbj1")
+top_radius = 0.4
+bottom_radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21mgs"]
+albedo_color = Color(0.843731, 0.446009, 0.554963, 1)
+metallic = 0.85
+roughness = 0.32
+
+[sub_resource type="SphereMesh" id="SphereMesh_5tub2"]
+material = SubResource("StandardMaterial3D_21mgs")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjucs"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q4xsf"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kq64f"]
+panorama = ExtResource("2_5xcpy")
+
+[sub_resource type="Sky" id="Sky_2xnn4"]
+sky_material = SubResource("PanoramaSkyMaterial_kq64f")
+radiance_size = 4
+
+[sub_resource type="Environment" id="Environment_n7jiq"]
+background_mode = 2
+sky = SubResource("Sky_2xnn4")
+adjustment_enabled = true
+
+[node name="DoublePendulum" type="Node3D"]
+script = ExtResource("1_ejrx6")
+
+[node name="Anchor" type="Node3D" parent="."]
+
+[node name="Pendulum1" type="RigidBody3D" parent="Anchor"]
+
+[node name="Rod1" type="MeshInstance3D" parent="Anchor/Pendulum1"]
+mesh = SubResource("CylinderMesh_6mwuj")
+
+[node name="Mass1" type="MeshInstance3D" parent="Anchor/Pendulum1"]
+transform = Transform3D(0.998908, 0, 0.0467229, 0, 1, 0, -0.0467229, 0, 0.998908, 0, 0.519508, 0)
+mesh = SubResource("SphereMesh_fe3up")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Anchor/Pendulum1"]
+
+[node name="Rod2" type="MeshInstance3D" parent="Anchor/Pendulum1/RigidBody3D"]
+mesh = SubResource("CylinderMesh_25fm2")
+
+[node name="Mass2" type="MeshInstance3D" parent="Anchor/Pendulum1/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42249, 0)
+mesh = SubResource("SphereMesh_5tub2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Anchor/Pendulum1/RigidBody3D"]
+shape = SubResource("SphereShape3D_kjucs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Anchor/Pendulum1"]
+shape = SubResource("SphereShape3D_q4xsf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.11553, 7.43475)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n7jiq")
