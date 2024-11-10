@@ -3,6 +3,7 @@
 This project is a simulation of a double pendulum system in 3D, implemented using GDScript in the Godot game engine. The primary objective is to programmatically showcase hierarchical object movement using simplified physics principles, specifically the chaotic and dynamic motion of a double pendulum under gravitational influence with damping.
 
 GitHub Repository Link: https://github.com/Manpreet-Singh-2004/Assignment-3_Godot
+
 Kamban Board Link: https://github.com/users/Manpreet-Singh-2004/projects/2/views/1
 
 ## Table of Contents
