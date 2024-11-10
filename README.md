@@ -81,7 +81,8 @@ This hierarchy enables the simulation of dependent motion, where movement in the
 ## Background 
 1. **Texture from Polyhaven**: Imported jpg texture file from Polyhaven
 2. **Creation of World Environment**: Created world environment and then added sky. Further I added panaroma material to load the jpg image.
-![alt text](oak_veneer_01_diff_1k-1.jpg)
+
+![oak_veneer_01_diff_1k](https://github.com/user-attachments/assets/3e9d92d0-6c90-47ea-add7-4e8f3ed4d0db)
 
 ## Testing and Debugging
 
@@ -96,7 +97,8 @@ This hierarchy enables the simulation of dependent motion, where movement in the
   - **Velocity Clamping**: Adjusted angular velocities to prevent over-acceleration during certain high-speed simulations.
   - **Error Logging**: Used print statements and Git commit messages to document and resolve issues, improving the final simulation quality.
  
-  ![alt text](image.png)
+  ![image](https://github.com/user-attachments/assets/177a5e97-4f5a-4196-855d-1dee35412b6c)
+
 
 ## Contributors
 
